@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ShieldHER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #6D1A36;
+      --burgundy-light: #9C3057;
+      --burgundy-dark: #3D0A1C;
+      --pink: #FF6B9D;
+      --bg: #FBF0F3;
+      --surface: #FFFFFF;
+      --text: #1A1A2E;
+      --muted: #6B6B8A;
+      --border: #E8C8D0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy), var(--burgundy-light));
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,107,157,0.15) 0%, transparent 60%);
+    }
+
+    .shield {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: white;
+      position: relative;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: rgba(255,255,255,0.75);
+      margin-top: 12px;
+      font-size: 15px;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(109,26,54,0.08);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 16px 20px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--burgundy);
+      border-bottom-color: var(--burgundy);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--burgundy);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 4px 20px rgba(109,26,54,0.06);
+    }
+
+    .intro-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .intro-card strong {
+      color: var(--burgundy);
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--burgundy), var(--burgundy-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: var(--muted);
+      font-size: 15px;
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 8px;
+      color: var(--burgundy);
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(109,26,54,0.04), rgba(156,48,87,0.06));
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy));
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .contact-card h3 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: white;
+      color: var(--burgundy);
+      padding: 12px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: transform 0.2s;
+    }
+
+    .contact-card a:hover { transform: translateY(-2px); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--burgundy); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="shield">🛡️</span>
+  <h1>Privacy Policy</h1>
+  <p>ShieldHER — Your safety, always with you</p>
+  <span class="badge">Last updated: April 8, 2026</span>
+</header>
+
+<nav>
+  <a href="#collection">Data We Collect</a>
+  <a href="#location">Location</a>
+  <a href="#contacts">Contacts</a>
+  <a href="#sms">SMS Alerts</a>
+  <a href="#firebase">Storage</a>
+  <a href="#rights">Your Rights</a>
+  <a href="#children">Children</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <div class="intro-card">
+    <p>ShieldHER is a women's personal safety application. We take your privacy seriously because <strong>your safety depends on it</strong>. This policy explains what data we collect, why we collect it, and how we protect it. We will never sell your data to third parties.</p>
+  </div>
+
+  <section id="collection">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>Data We Collect</h2>
+    </div>
+    <h3>Account Information</h3>
+    <ul>
+      <li>Full name and email address (provided at registration)</li>
+      <li>Password (stored securely via Firebase Authentication — we never see it)</li>
+      <li>Profile information you choose to add</li>
+    </ul>
+    <h3>Usage Data</h3>
+    <ul>
+      <li>SOS alerts you trigger (timestamp, status, location)</li>
+      <li>Safe walk sessions (duration, start/end time, location)</li>
+      <li>Check-in records (timestamp, message, status)</li>
+      <li>Community danger zone reports you submit</li>
+    </ul>
+    <h3>Device Data</h3>
+    <ul>
+      <li>Firebase Cloud Messaging (FCM) token for push notifications</li>
+      <li>Device type and operating system (collected automatically by Firebase)</li>
+    </ul>
+  </section>
+
+  <section id="location">
+    <div class="section-header">
+      <div class="section-icon">📍</div>
+      <h2>Location Data</h2>
+    </div>
+    <div class="highlight-box">
+      <p><strong>Location is the core of ShieldHER's safety features.</strong> We collect your GPS coordinates only when safety features are active — never silently in the background without your knowledge.</p>
+    </div>
+    <h3>When we collect location:</h3>
+    <ul>
+      <li>When you trigger an SOS alert (one-time snapshot)</li>
+      <li>During an active Safe Walk session (every 10 seconds)</li>
+      <li>When you send a manual check-in</li>
+      <li>When you report a danger zone</li>
+    </ul>
+    <h3>How location is used:</h3>
+    <ul>
+      <li>Included in emergency SMS alerts sent to your trusted contacts</li>
+      <li>Shown as a Google Maps link so contacts can find you</li>
+      <li>Stored in your safety history in Firestore</li>
+      <li>Never shared with advertisers or third parties</li>
+    </ul>
+    <p>You can revoke location permissions at any time in your device settings. Some features will be limited without location access.</p>
+  </section>
+
+  <section id="contacts">
+    <div class="section-header">
+      <div class="section-icon">👥</div>
+      <h2>Trusted Contacts</h2>
+    </div>
+    <p>When you add a trusted contact, we store their name, phone number, and relationship label in your private Firestore account. This data is:</p>
+    <ul>
+      <li>Only accessible by you and our backend functions</li>
+      <li>Used solely to send emergency SMS alerts on your behalf</li>
+      <li>Never shared with other users or third parties</li>
+      <li>Deleted when you remove the contact or delete your account</li>
+    </ul>
+    <div class="highlight-box">
+      <p>By adding someone as a trusted contact, you confirm you have their consent to receive emergency SMS notifications from ShieldHER on your behalf.</p>
+    </div>
+  </section>
+
+  <section id="sms">
+    <div class="section-header">
+      <div class="section-icon">💬</div>
+      <h2>SMS Notifications</h2>
+    </div>
+    <p>ShieldHER uses Twilio to send SMS messages to your trusted contacts during emergencies. When an alert is triggered:</p>
+    <ul>
+      <li>Your trusted contacts receive an SMS with your name and GPS location link</li>
+      <li>Messages are sent from a ShieldHER Twilio phone number</li>
+      <li>Your personal phone number is never revealed to contacts via SMS</li>
+      <li>Contacts can reply STOP to opt out of future messages</li>
+    </ul>
+    <p>Twilio's privacy policy applies to SMS delivery. We share only the minimum data necessary (recipient phone number and message content) with Twilio.</p>
+  </section>
+
+  <section id="firebase">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <h2>Data Storage & Security</h2>
+    </div>
+    <p>All data is stored in Google Firebase (Firestore), which provides:</p>
+    <ul>
+      <li>Encryption at rest and in transit (TLS/SSL)</li>
+      <li>Role-based access controls</li>
+      <li>SOC 2 Type II compliance</li>
+      <li>Data centers in the United States</li>
+    </ul>
+    <p>We implement Firestore security rules to ensure users can only access their own data. Our backend Cloud Functions access data only as needed to deliver emergency notifications.</p>
+    <h3>Data Retention</h3>
+    <ul>
+      <li>Safety history (SOS, safe walks, check-ins) retained for 90 days by default</li>
+      <li>Account data retained until you delete your account</li>
+      <li>Danger zone reports retained until moderated or removed</li>
+    </ul>
+  </section>
+
+  <section id="rights">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>Your Rights</h2>
+    </div>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of your data at any time</li>
+      <li><strong>Correction</strong> — update your name, email, or contact information in the app</li>
+      <li><strong>Deletion</strong> — delete your account from the Profile screen; this removes your auth record and user data</li>
+      <li><strong>Portability</strong> — request an export of your safety history</li>
+      <li><strong>Withdrawal</strong> — revoke location or notification permissions at any time in device settings</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:support@shieldher.app" style="color:var(--burgundy)">support@shieldher.app</a>.</p>
+  </section>
+
+  <section id="children">
+    <div class="section-header">
+      <div class="section-icon">🚸</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>ShieldHER is designed for users 18 years of age and older. We do not knowingly collect personal information from anyone under 18. If you believe a minor has created an account, please contact us immediately at <a href="mailto:support@shieldher.app" style="color:var(--burgundy)">support@shieldher.app</a> and we will delete the account promptly.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page and notify you via email or in-app notification if the changes are significant. Continued use of ShieldHER after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <div class="contact-card" id="contact">
+    <h3>Questions about your privacy?</h3>
+    <p>We're here to help. Reach out to our team directly.</p>
+    <a href="mailto:support@shieldher.app">support@shieldher.app</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 ShieldHER. All rights reserved. &nbsp;·&nbsp; <a href="terms.html">Terms & Conditions</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

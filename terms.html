@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions — ShieldHER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #6D1A36;
+      --burgundy-light: #9C3057;
+      --burgundy-dark: #3D0A1C;
+      --pink: #FF6B9D;
+      --bg: #FBF0F3;
+      --surface: #FFFFFF;
+      --text: #1A1A2E;
+      --muted: #6B6B8A;
+      --border: #E8C8D0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy), var(--burgundy-light));
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(255,107,157,0.15) 0%, transparent 60%);
+    }
+
+    .shield {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      color: white;
+      position: relative;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: rgba(255,255,255,0.75);
+      margin-top: 12px;
+      font-size: 15px;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(109,26,54,0.08);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 16px 20px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--burgundy);
+      border-bottom-color: var(--burgundy);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .warning-card {
+      background: #FFF8E1;
+      border: 1px solid #FFE082;
+      border-left: 4px solid #FFA000;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 48px;
+    }
+
+    .warning-card p {
+      color: #5D4037;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .warning-card strong { color: #E65100; }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--burgundy), var(--burgundy-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: var(--muted);
+      font-size: 15px;
+      padding: 6px 0 6px 24px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 8px;
+      color: var(--burgundy);
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(109,26,54,0.04), rgba(156,48,87,0.06));
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p { margin: 0; }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 500px) {
+      .pricing-cards { grid-template-columns: 1fr; }
+    }
+
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--burgundy);
+      background: linear-gradient(135deg, rgba(109,26,54,0.04), rgba(156,48,87,0.06));
+    }
+
+    .pricing-card .price {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--burgundy);
+    }
+
+    .pricing-card .period {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .pricing-card .plan-name {
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy));
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .contact-card h3 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: white;
+      color: var(--burgundy);
+      padding: 12px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: transform 0.2s;
+    }
+
+    .contact-card a:hover { transform: translateY(-2px); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--burgundy); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="shield">📜</span>
+  <h1>Terms & Conditions</h1>
+  <p>ShieldHER — Your safety, always with you</p>
+  <span class="badge">Last updated: April 8, 2026</span>
+</header>
+
+<nav>
+  <a href="#acceptance">Acceptance</a>
+  <a href="#service">The Service</a>
+  <a href="#emergency">Emergency Disclaimer</a>
+  <a href="#subscription">Subscription</a>
+  <a href="#conduct">Conduct</a>
+  <a href="#liability">Liability</a>
+  <a href="#termination">Termination</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <div class="warning-card">
+    <p><strong>⚠️ Important:</strong> ShieldHER is a personal safety tool and is <strong>not a substitute for calling 911 or local emergency services</strong>. If you are in immediate danger, always contact emergency services first. Please read these terms carefully before using the app.</p>
+  </div>
+
+  <section id="acceptance">
+    <div class="section-header">
+      <div class="section-icon">✅</div>
+      <h2>Acceptance of Terms</h2>
+    </div>
+    <p>By downloading, installing, or using the ShieldHER application ("App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+    <p>These Terms apply to all users of the App, including free and premium subscribers. We reserve the right to update these Terms at any time. Continued use of the App after changes constitutes acceptance.</p>
+    <p>You must be at least 18 years of age to use ShieldHER.</p>
+  </section>
+
+  <section id="service">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>The Service</h2>
+    </div>
+    <p>ShieldHER provides the following safety features:</p>
+    <ul>
+      <li>SOS emergency alerts sent to trusted contacts via SMS</li>
+      <li>Safe Walk mode with timed location sharing</li>
+      <li>Scheduled check-in timers with automatic alerts</li>
+      <li>Fake call feature to safely exit uncomfortable situations</li>
+      <li>Community danger zone reporting and map</li>
+      <li>Trusted contact management (up to 5 contacts on free plan)</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Features depend on device permissions (location, notifications, microphone), internet connectivity, and Twilio SMS delivery. We cannot guarantee uninterrupted service.</p>
+    </div>
+  </section>
+
+  <section id="emergency">
+    <div class="section-header">
+      <div class="section-icon">🚨</div>
+      <h2>Emergency Services Disclaimer</h2>
+    </div>
+    <div class="highlight-box">
+      <p><strong>ShieldHER does not contact emergency services (911, police, ambulance) on your behalf.</strong> The app sends SMS notifications to your personal trusted contacts only.</p>
+    </div>
+    <p>In any life-threatening situation:</p>
+    <ul>
+      <li>Call 911 (or your local emergency number) immediately</li>
+      <li>Do not rely solely on ShieldHER as your emergency plan</li>
+      <li>SMS delivery is not guaranteed and may be delayed</li>
+      <li>Your trusted contacts may not be available to respond</li>
+    </ul>
+    <p>ShieldHER is a supplementary safety tool. It is not a professional security service, alarm monitoring service, or emergency dispatch system.</p>
+  </section>
+
+  <section id="subscription">
+    <div class="section-header">
+      <div class="section-icon">💳</div>
+      <h2>Subscription & Billing</h2>
+    </div>
+
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="plan-name">Monthly</div>
+        <div class="price">$8</div>
+        <div class="period">per month</div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="plan-name">Yearly ⭐</div>
+        <div class="price">$64</div>
+        <div class="period">per year — save 33%</div>
+      </div>
+    </div>
+
+    <h3>Billing Terms</h3>
+    <ul>
+      <li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date</li>
+      <li>Payment is charged to your Google Play or Apple App Store account</li>
+      <li>You can manage or cancel your subscription in your device's app store settings</li>
+      <li>No refunds for partial subscription periods unless required by law</li>
+    </ul>
+
+    <h3>Free Plan</h3>
+    <p>ShieldHER offers a free plan with core safety features. Premium features require a paid subscription. We reserve the right to change what features are included in each plan with 30 days notice.</p>
+
+    <h3>B2B / Enterprise</h3>
+    <p>Organizations interested in providing ShieldHER to employees may contact us at <a href="mailto:support@shieldher.app" style="color:var(--burgundy)">support@shieldher.app</a> for enterprise pricing at $5/user/month.</p>
+  </section>
+
+  <section id="conduct">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>Acceptable Use</h2>
+    </div>
+    <p>You agree NOT to use ShieldHER to:</p>
+    <ul>
+      <li>Submit false SOS alerts or fake danger zone reports</li>
+      <li>Harass, stalk, or monitor another person without their consent</li>
+      <li>Add someone as a trusted contact without their knowledge or consent</li>
+      <li>Attempt to access another user's account or data</li>
+      <li>Use the fake call feature to deceive emergency services</li>
+      <li>Violate any applicable local, state, or federal laws</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Misuse of the SOS feature, including repeated false alerts, may result in account suspension. Submitting false danger zone reports harms the community and may result in permanent account termination.</p>
+    </div>
+  </section>
+
+  <section id="liability">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>Limitation of Liability</h2>
+    </div>
+    <p>To the maximum extent permitted by law, ShieldHER and its creators shall not be liable for:</p>
+    <ul>
+      <li>Failure of SMS delivery due to carrier issues, network outages, or Twilio service interruptions</li>
+      <li>Trusted contacts who are unavailable or unable to respond to alerts</li>
+      <li>Inaccurate GPS location data provided by your device</li>
+      <li>Any harm, injury, or loss resulting from reliance on ShieldHER as a sole safety measure</li>
+      <li>Data loss resulting from account deletion or app uninstallation</li>
+      <li>Third-party service outages (Firebase, Twilio, Google Maps)</li>
+    </ul>
+    <p>ShieldHER is provided "as is" without warranties of any kind. Your use of the App is at your sole risk.</p>
+    <p>In no event shall our total liability exceed the amount you paid for the App in the 12 months preceding the claim.</p>
+  </section>
+
+  <section id="termination">
+    <div class="section-header">
+      <div class="section-icon">🔚</div>
+      <h2>Termination</h2>
+    </div>
+    <p>You may delete your account at any time from the Profile screen in the app. Account deletion is permanent and removes your personal data from our systems.</p>
+    <p>We reserve the right to suspend or terminate accounts that:</p>
+    <ul>
+      <li>Violate these Terms</li>
+      <li>Submit repeated false alerts</li>
+      <li>Engage in abusive behavior toward other users or our team</li>
+      <li>Are found to be used for stalking or harassment</li>
+    </ul>
+    <p>Upon termination, your right to use ShieldHER ceases immediately. Subscription fees already paid are non-refundable except where required by law.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🌍</div>
+      <h2>Governing Law</h2>
+    </div>
+    <p>These Terms are governed by the laws of the State of Texas, United States, without regard to its conflict of law provisions. Any disputes shall be resolved in the courts of Dallas County, Texas.</p>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.</p>
+  </section>
+
+  <div class="contact-card" id="contact">
+    <h3>Questions about these Terms?</h3>
+    <p>We're happy to clarify anything. Reach out to us directly.</p>
+    <a href="mailto:support@shieldher.app">support@shieldher.app</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 ShieldHER. All rights reserved. &nbsp;·&nbsp; <a href="terms.html">Terms & Conditions</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
